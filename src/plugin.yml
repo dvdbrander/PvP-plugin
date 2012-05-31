@@ -1,0 +1,3 @@
+name: PvPplugin
+main: mainClass.PvPplugin
+version: 0.1
