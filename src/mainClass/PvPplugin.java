@@ -14,4 +14,10 @@ public class PvPplugin extends JavaPlugin{
 		log.info("PvP-plugin enabled");
 		super.onEnable();
 	}
+	
+	@Override
+	public void onDisable() {
+		log.info("PvP-plugin disabled successfully");
+		super.onEnable();
+	}
 }
