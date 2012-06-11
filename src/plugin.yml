@@ -1,3 +1,21 @@
 name: PvPplugin
-main: mainClass.PvPplugin
+main: mainPackage.PvPplugin
 version: 0.1
+commands:
+   pvp:
+      description: Toggle pvp or see your stats
+      usage: /pvp <on/off/stats>
+      permission: pvp.canEnable
+      permission-message: You don't have <permission>
+depend: [PermissionsEx]
+softdepend: [Spout]
+load: postworld
+permissions:
+     pvp.*:
+         description: Give complete access over the pvp plugin
+         children:
+         pvp.canEnable: true
+     pvp.canEnable:
+         description: Allow the player to pvp
+     pvp.hasEnabled:
+         description: System stuff

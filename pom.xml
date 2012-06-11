@@ -1,0 +1,77 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>d4dev</groupId>
+	<artifactId>PvP-plugin</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<distributionManagement>
+		<snapshotRepository>
+			<id>bukkit-plugins</id>
+			<url>http://repo.tehkode.ru/repository/bukkit-plugins/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<repositories>
+		<repository>
+			<id>spout-repo</id>
+			<url>http://repo.spout.org</url>
+		</repository>
+		<repository>
+			<id>bukkit-plugins</id>
+			<name>Bukkit Plugins Repository</name>
+			<url>http://repo.tehkode.ru/repository/bukkit-plugins/</url>
+		</repository>
+		<repository>
+			<id>bukkit-repo</id>
+			<url>http://repo.bukkit.org/artifactory/repo</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.getspout</groupId>
+			<artifactId>spoutplugin</artifactId>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>ru.tehkode</groupId>
+			<artifactId>PermissionsEx</artifactId>
+			<exclusions>
+				<exclusion>
+					<artifactId>bukkit</artifactId>
+					<groupId>org.bukkit</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+			<dependency>
+				<groupId>org.bukkit</groupId>
+				<artifactId>craftbukkit</artifactId>
+			</dependency>
+	</dependencies>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.getspout</groupId>
+				<artifactId>spoutplugin</artifactId>
+				<version>dev-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>ru.tehkode</groupId>
+				<artifactId>PermissionsEx</artifactId>
+				<version>1.18</version>
+			</dependency>
+			<dependency>
+				<groupId>org.bukkit</groupId>
+				<artifactId>craftbukkit</artifactId>
+				<version>1.2.3-R0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>org.bukkit</groupId>
+				<artifactId>bukkit</artifactId>
+				<version>1.1-R1</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>

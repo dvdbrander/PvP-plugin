@@ -1,0 +1,5 @@
+# default config.yml
+disabledCommandsInPvp:
+ - /tp
+ - /spawn
+ - /gamemode
